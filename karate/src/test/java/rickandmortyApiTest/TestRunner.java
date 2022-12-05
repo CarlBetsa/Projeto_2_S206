@@ -9,7 +9,6 @@ class TestRunner {
     void testParallel() {
         Results results = Runner.path("classpath:rickandmortyApiTest")
                 .tags("@RickandMorty")
-                //.outputCucumberJson(true)
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
